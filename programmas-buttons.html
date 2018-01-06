@@ -1,0 +1,149 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/bijwerken.css"> <!--bewerken style-->
+<script src='js/functie.js' type='text/javascript'></script> <!--transitions-->
+<script src='js/gebiedtoevoegen.js' type='text/javascript'></script> <!--transitions-->
+<script type="text/javascript" src="js/polygonset.min.js"></script>
+<script type="text/javascript" src="js/gebiedbekijken.js"></script>
+<style>
+	
+/* PROGRAMMAS */
+	
+.programma {
+    width: 200px;
+    height: auto;
+    float: left;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 50px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+	
+.programma:hover{
+box-shadow: 0px 0px 2px 3px rgba(77, 167, 204, 0.6);
+}
+	
+.prog-icoon {
+    width: 40%;
+    height: auto;
+    float: left;
+    padding: 10% 30% 0 30%;
+}
+	
+	.prog-icoon img{
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+	
+.p-naam {
+    width: 90%;
+    height: auto;
+    float: left;
+    padding: 0 5%;
+    line-height: 0px;
+	color: #4c698a;
+}
+	
+	.permissieicoon {
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+	
+.pi-icoon {
+    width: 10%;
+    height: auto;
+    float: left;
+    padding: 0 45% 10% 45%;
+}
+	
+	.pi-icoon img{
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+
+/*
+	
+#2980b9; Programma blauw
+#4c698a; Programma naam grijs
+0px 0px 2px 3px rgba(77, 167, 204, 0.6); programma schaduw blauw
+
+*/
+	
+/* DOWNLOAD BUTTONS */
+
+.download-items, .download-name {
+	width: 280px;
+	height: auto;
+	float: left;
+	font-family:sans-serif;
+}
+	
+.download-name {
+	margin:3px;
+}
+	
+.download-btn {
+	width: auto;
+	height: auto;
+	float: left;
+}
+	
+.download-btn .btn {
+    width: auto;
+    height: auto;
+    float: left;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 3px;
+    color: #fff;
+    background-color:#8199b4;
+    border: none;
+    box-shadow: none;
+	cursor:pointer;
+}
+
+.download-btn .btn:hover {
+    background-color:#2980b9;
+    border: none;
+    box-shadow: none;
+}
+
+</style>
+</head>
+	
+<body>
+	<!-- PROGRAMMA ICOON -->
+<div class="programma">
+	<div class="prog-icoon">
+		<img src="/icon/icons8-menu-528.png"/>
+	</div>
+	<div class="p-naam">
+		<h4>Programma naam</h4>
+	</div>
+	<div class="permissieicoon">
+		<div class="pi-icoon">
+			<img src="/icon/icons8-menu-528.png"/>
+		</div>
+	</div>
+</div>
+	
+	<!-- DOWNLOAD BUTTONS -->
+<div class="download-items">
+	<div class="download-name">
+		<h4>Download hieronder</h4>
+	</div>
+	<div class="download-btn">
+		<button class="btn">XLS</button>
+		<button class="btn">CSV</button>
+		<button class="btn">PDF</button>
+	</div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,562 @@
+.s4 {
+    min-width: 200px;
+    width: 18%;
+    float: left;
+	margin:0 0 100px 0;
+    height: auto;
+    padding: 1%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.s5 {
+    width: 98%;
+    float: left;
+    margin: 0 0 100px 0;
+    height: auto;
+    padding: 1%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.search label {
+    width:90px;
+    height:auto;
+    float:left;
+    line-height:30px;
+    color:#ffffff;
+	font-size:15px;
+}
+
+
+
+.nbk {
+    background-color: #599eb1;
+    text-align: center;
+}
+
+.searchbutton:hover {
+
+background-color:#599eb1;
+}
+
+.searchbutton {
+    display: block;
+    background-color: #599eb1;
+    margin: 0 auto 20px auto;
+    width: 50%;
+    min-width: 130px;
+    height: 30px;
+    padding: 5%;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    line-height: 5px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sbutton {
+    background-color:#599eb1;
+    margin:0 auto 20px auto;
+    width:65%;
+    min-width:150px;
+    height:30px;
+    padding:10px;
+    color:#ffffff;
+    text-align: center;
+  	
+}
+
+#gebiedsection {
+	float:left;
+	margin: auto;
+    width:80%;
+	background-color:#ffffff;
+    height: auto;   
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    
+}
+.buttonhover {
+	background-color:#b3ced6;
+}
+
+.selected {
+    background-color:#83beb1;
+}
+
+.selectednr {
+	
+	background-color:#83beb1;
+	color:#ffffff;
+	
+}
+
+.gebiednaam{
+    width:100%;
+    height:50px;
+    margin:0 auto 0 auto;
+    background-color:#599eb1;
+    color:#ffffff;
+    border-radius: 7px 7px 0 0;
+    text-align: center;
+    line-height:50px;
+    font-size: 17px;
+   
+}
+
+
+.foutmelding {
+	color:#ce2f2f;
+	font-size: 16px;
+	padding:30px 10px;
+	width: 100%;
+	height: auto;
+	margin:auto;
+	text-align: center;
+}
+
+
+.aaw {
+	background-color:#83beb1;
+	color:#ffffff;
+}
+
+.afw {
+	background-color:#ffffff;
+	color:#000000;
+}
+
+.nb {
+	background-color:#ce2f2f;
+	color:#ffffff;
+}
+
+.ab {
+	cursor: pointer;
+}
+
+.abhover {
+	background-color:#b3ced6;
+}
+
+.att {
+	background-color:#599eb1;
+	color:#ffffff;
+}
+
+
+.popup {
+    position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+    width:40%;
+	min-width:650px;
+	margin:0px auto;
+	height:30%;
+	min-height:300px;
+    background-color:#ffffff;
+    z-index: 999;
+	border-radius: 7px;
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+	
+}
+
+
+.gebiednr {
+    display:inline; 
+}
+
+#straatsection {
+	float:left;
+    width:50%;
+    padding:2% 0 2% 0;
+    height:auto;
+    margin:auto;
+}
+
+.straten {
+   cursor: pointer;
+    width:100%;
+    height:50px;
+    padding:5px auto 0 auto;
+     -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  
+}
+
+
+.nietbel {
+    width:45%;
+    height:20px;
+    display:inline;
+    
+    
+}
+
+.datumnietbel {
+    width:35%;
+    margin:0 0 0 10%;
+    height:20px;
+    display:inline;
+    
+}
+
+.nummertitel {
+	width:100%;
+    height:50px;
+    margin:0 auto 0 auto;
+    background-color:#599eb1;
+    color:#ffffff;
+    border-radius: 7px 7px 0 0;
+    text-align: center;
+    line-height:50px;
+    font-size: 17px;
+}
+
+.werkbij {
+	border-radius: 0 0 7px 7px;
+	background-color:#b3ced6;
+}
+
+.bijwerkknop {
+	text-align: center;
+	flex:1;
+	height: 40px;
+	padding: 5px 5% 5px 5%;
+	border-radius: 0 0 7px 7px;
+	background-color:#b3ced6;
+	cursor: pointer;
+}
+
+.bijwerkopslaan {
+	text-align: center;
+	flex:1;
+	height: 40px;
+	padding: 5px 5% 5px 5%;
+	border-radius: 0 0 7px 7px;
+	background-color:#b3ced6;
+	cursor: pointer;
+}
+
+.bijwerkknophover {
+	background-color:#599eb1;
+	border-radius: 0 0 7px 7px;
+	color:#ffffff;
+}
+
+.bijwerkopslaanhover {
+	background-color:#599eb1;
+	border-radius: 0 0 7px 7px;
+	color:#ffffff;
+}
+
+.selectedknop {
+	background-color:#599eb1;
+	border-radius: 0 0 0 7px;
+	color:#ffffff;
+}
+
+.selectedopslaan {
+	background-color:#599eb1;
+	border-radius: 0 0 7px 0;
+	color:#ffffff;
+}
+
+.gebiedb {
+	width:100%;
+	height:26px;
+	padding:3px 0 3px 0;
+	background-color:#c9c545;
+}
+
+.gebiedb > p {
+	line-height:0px;
+	text-align: center;
+	color:#ffffff;
+}
+
+.gebiedo {
+	width:100%;
+	height:26px;
+	padding:3px 0 3px 0;
+	background-color:#599eb1;
+}
+
+.gebiedo > p {
+	line-height:0px;
+	text-align: center;
+	color:#ffffff;
+}
+
+
+.bewerkalert {
+	height:32px;
+	width:100%;
+}
+
+.nummerveld {
+	margin: auto;
+    width:80%;
+    height: auto; 
+	background-color:#ffffff;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    box-shadow: 0px 0px 10px 1px rgba(122,122,122,1);
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.straatnr {
+    float:left;
+    width:10%;
+    
+    height:20px;
+    text-align: center;
+    line-height:0px;
+    border-radius: 7px 0 0 7px;
+    
+}
+
+.nr {
+    width:90%;
+    height:20px;
+    text-align: center;
+    line-height:30px;
+    border-radius: 0 7px 7px 0;
+}
+
+.svolledig {
+	width: 100%;
+	height:20p%;
+	font-size:18px;
+	display:flex;
+	flex-direction: row;
+	background-color: #b3ced6;
+	border-radius:7px 7px 0 0;
+}
+
+.snaam {
+	width:60%;
+height:40px;
+	line-height:0px;
+	padding:5px 5%;
+	
+}
+
+.terug {
+	width:20%;
+	height:40px;
+	line-height:0px;
+	padding:5px;
+	text-align-last: center;
+	
+	
+}
+
+.terug:hover {
+	color:#ffffff;
+	background-color:#599eb1;
+}
+
+.annuleer {
+	width:20%;
+	height:40px;
+	line-height:0px;
+	padding:5px;
+	text-align-last: center;
+	border-radius:0 7px 0 0;
+	
+}
+
+.annuleer:hover {
+	color:#ffffff;
+	background-color: #cc5555;
+	
+}
+
+.vraagveld {
+	width:100%;
+	height:60px;
+	margin:10px auto 0 auto;
+	
+	
+}
+
+.vraagveld-button {
+	width:100%;
+	height:auto;
+	margin:auto;
+
+}
+
+.vvb {
+	width:40%;
+	height:40px;
+	margin:10px auto 10px auto;
+	background-color:#599eb1;
+	border-radius:5px;
+	color:#ffffff;
+	
+}
+
+.vvbhover {
+	background-color:#599eb1;
+}
+
+.vvb >p {
+	
+	margin:10px auto 10px auto;
+	text-align: center;
+	padding:10px;
+}
+
+.inputnb {
+	width:40%;
+	margin:0px auto;
+	height:60px;
+	
+}
+
+.search {
+	
+    background-color:#b3ced6;
+    margin:0 auto 20px auto;
+    width:50%;
+    min-width:154px;
+    height:30px;
+    border-radius: 5px;
+    z-index: 2;
+	
+	
+}
+
+.search input {
+	width:100%;
+	height:30px;
+	border-radius:5px;
+}
+
+.inputnb > input {
+	width:100%;
+	height:30px;
+	margin:10px auto 10px auto;
+ 	border-radius:5px;
+	background-color:#b3ced6;
+	border:none;
+	text-align:center;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+
+
+.vraagveld > p {
+	margin:10px auto 10px auto;
+	text-align:center;
+	height:20px;
+	
+}
+
+.aangeven {
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.aangnb-veld, .aangat-veld, .aangan-veld {
+	width:65%;
+
+}
+
+.aangnbk, .aangatk, .aangank{
+	width:35%;
+	height:auto;
+	min-width:130px;
+	min-height: 130px;
+	flex:1;	
+} 
+
+.aangnb, .aangat, .aangan{
+	width:30%;
+	height:auto;
+	min-width:130px;
+	min-height: 130px;
+	cursor: pointer;
+	    flex: 1;
+}
+
+
+
+.aangnb > img, .aangat > img, .aangan > img{
+width:40%;
+height:auto;
+margin:0px auto;
+	display:block;
+		-webkit-transform: translateY(50%);
+  	-ms-transform: translateY(50%);
+  	transform: translateY(50%);
+}
+
+.aangnbk > img, .aangatk > img, .aangank > img{
+width:30%;
+height:auto;
+margin:0px auto;
+	display:block;
+	
+	-webkit-transform: translateY(100%);
+  	-ms-transform: translateY(100%);
+  	transform: translateY(100%); 
+}
+
+
+.pictexten {
+	width:100%;
+	height:20%;
+	display:flex;
+}
+
+.pictext {
+	flex:1;
+	height:auto;
+	height:40px;
+	text-align: center;
+	display:inline-block;
+	font-size:18px;
+	color:#237084;
+	
+}
+
+.nbn {
+	margin:0 5% 0 0;
+}
+

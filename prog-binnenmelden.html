@@ -1,0 +1,970 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/bijwerken.css"> <!--bewerken style-->
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script src='/js/functie.js' type='text/javascript'></script> <!--transitions-->
+<script src='/js/gebiedtoevoegen.js' type='text/javascript'></script> <!--transitions-->
+<script type="text/javascript" src="/js/polygonset.min.js"></script>
+<script type="text/javascript" src="/js/gebiedbekijken.js"></script>
+	
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="llqrcode.js"></script>
+
+<style>
+	
+/* PROGRAMMAS */
+	
+.programma {
+    width: 200px;
+    height: auto;
+    float: left;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 50px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+	
+.programma:hover{
+box-shadow: 0px 0px 2px 3px rgba(77, 167, 204, 0.6);
+}
+	
+.prog-icoon {
+    width: 40%;
+    height: auto;
+    float: left;
+    padding: 10% 30% 0 30%;
+}
+	
+	.prog-icoon img{
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+	
+.p-naam {
+    width: 90%;
+    height: auto;
+    float: left;
+    padding: 0 5%;
+    line-height: 0px;
+	color: #4c698a;
+}
+	
+	.permissieicoon {
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+	
+.pi-icoon {
+    width: 10%;
+    height: auto;
+    float: left;
+    padding: 0 45% 10% 45%;
+}
+	
+	.pi-icoon img{
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+
+/*
+	
+#2980b9; Programma blauw
+#4c698a; Programma naam grijs
+0px 0px 2px 3px rgba(77, 167, 204, 0.6); programma schaduw blauw
+
+*/
+	
+/* DOWNLOAD BUTTONS */
+
+.download-items, .download-name {
+	width: 280px;
+	height: auto;
+	float: left;
+	font-family:sans-serif;
+}
+	
+.download-name {
+	margin:3px;
+}
+	
+.download-btn {
+	width: auto;
+	height: auto;
+	float: left;
+}
+	
+.download-btn .btn {
+    width: auto;
+    height: auto;
+    float: left;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 3px;
+    color: #fff;
+    background-color:#8199b4;
+    border: none;
+    box-shadow: none;
+	cursor:pointer;
+}
+
+.download-btn .btn:hover {
+    background-color:#2980b9;
+    border: none;
+    box-shadow: none;
+}
+
+
+	
+/*Pop-ups*/
+
+.pop-up p, .pop-up h4 {
+	margin:0;
+}
+	
+.pop-up .pop-header p {
+	font-size:18px;
+}
+	
+.pop-up .pop-image .keuze, .pop-up .pop-aangeven-image .keuze {
+	width:100%;
+	height:auto;
+	float:left;
+	margin:20px 0;
+	text-align: center;
+}
+
+.pop-up {
+	width:40%;
+    min-width: 650px;
+	height:auto;
+	margin:auto;
+	float:left;
+	z-index: 99999;
+	/* position: absolute;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    left: 0;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: sans-serif;
+	box-shadow: 0px 0px 2px 3px rgba(77, 167, 204, 0.6);
+}
+	
+.pop-header {
+	width:100%;
+	height:auto;
+	float:left;
+	text-align: center;
+	border-bottom: 1px #8199b4 solid;
+}
+	
+.pop-75 {
+    width: 70%;
+    height: auto;
+    padding: 20px 0 20px 5%;
+    float: left;
+    background: #ffffff;
+    color: #628ca7;
+    border-radius: 5px 0 0 0;
+	font-weight: 700;
+}
+	
+.pop-25 {
+	width:25%;
+	height: auto;
+	padding: 0;
+	float:left;
+	color: #4c698a;
+}
+	
+.pop-sluiten {
+    width: 150px;
+    min-width: 100px;
+    padding: 20px 0 20px 0;
+    height: auto;
+    float: right;
+    background-color: #ffdada;
+    border-radius: 0 5px 0 0;
+    border-left: 1px #8199b4 solid;
+	cursor:pointer;
+}
+	
+.pop-annuleer:hover, .pop-sluiten:hover {
+	color:#fff;
+	background-color:#ed3700;
+}
+	
+.pop-title {
+    width: 90%;
+    height: auto;
+    padding: 10px 5%;
+    float: left;
+    text-align: center;
+    background: #f7fafc;
+}
+	
+.pop-image {
+	width:30%;
+	height:auto;
+	float:left;
+	margin:10%;
+	cursor: pointer;
+}
+	
+.pop-aangeven-image {
+	width:28.3333333333%;
+	height:auto;
+	float:left;
+	margin:2.5%;
+	cursor: pointer;
+}
+	
+.pop-image .image, .pop-aangeven-image .image {
+	width:90px;
+	height:auto;
+	margin:auto;
+	text-align: center;
+}
+	
+.pop-image .image img, .pop-aangeven-image .image img{
+	width:100%;
+	height:auto;
+	float:left;	
+}
+	
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+	
+.pop-text {
+	width: 90%;
+    padding: 10px 5%;
+    height: 80px;
+    float: left;
+}
+
+.pop-14 {
+    width: 16%;
+    height: auto;
+    float: left;
+    margin: 10px 3%;
+    padding: 10px 4%;		
+}
+	
+.pop-34 {
+    width: 60%;
+    height: auto;
+    float: left;
+    margin: 10px 3%;
+    padding: 10px 2%;		
+}
+
+.pop-invoerveld {
+    width: 90%;
+    height: auto;
+    float: left;
+    margin: 10px 3%;
+    padding: 10px 2%;
+}
+	
+.pop-buttons {
+    width: 100%;
+    height: auto;
+    float: left;
+	text-align: center;
+}
+
+.pop-buttons .btn {
+	width: 50%;
+    height: auto;
+    padding: 10px 0 5% 0;
+    float: left;
+    float: left;
+}
+	
+.pop-annuleer, .pop-verder {
+	width: 200px;
+    height: auto;
+	padding:15px 15px;
+	margin:auto;
+	border: 1px #c7d0d9 solid;
+    border-radius: 5px;
+	cursor:pointer;
+}
+	
+.pop-verder:hover {
+	color:#fff;
+	background-color: #4c698a;
+}
+	
+label {
+	/*display: inline-block;*/
+  	width: 140px;
+    text-align:left;
+    margin:10px 0;
+}
+	
+textarea.anders-text {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    float: left;
+    background: #f7fafc;
+    -webkit-appearance: textarea;
+    border: 1px #eee solid;
+    border-radius: 5px;
+    max-height: 100px;
+	padding:5px;
+	font-size:16px;
+	font-family: sans-serif;
+}
+	
+/* DROPDOWN KEUZE MENU */
+	
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+
+
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.select {
+	
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    color: #3e5f75;
+    width: 220px;
+    height: 50px;
+}
+
+.select-styled {
+	    width: 174.9px;
+  line-height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 10px 15px;
+	border-radius:5px;
+  border: 1px solid #c5c5c5; 
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.select-styled:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #c5c5c5 transparent transparent transparent;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.select-styled:hover {
+  background-color: #4c698a;
+	color:#fff;
+}
+.select-styled:active, .select-styled.active {
+  background-color: #4c698a;
+	color:#fff;
+}
+.select-styled:active:after, .select-styled.active:after {
+  top: 9px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.select-options {;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px  #c5c5c5 solid;
+	border-right: 1px  #c5c5c5 solid;
+	border-bottom: 1px  #c5c5c5 solid;
+	border-radius:5px;
+    background-color: #ffffff;
+    width: 204px;
+	height:120px;
+	overflow-y:scroll;
+}
+.select-options li {
+  margin: 0;
+  padding: 12px 0;
+  text-indent: 15px;
+  border-top: 1px solid  #c5c5c5;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+.select-options li:hover {
+  color:#fff;
+background-color: #4c698a;
+}
+.select-options li[rel="hide"] {
+  display: none;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border: 1px solid #c5c5c5;
+    background: #ffffff;
+    margin: 5px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+input[type="date"], focus {
+    color: #3e5f75;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+
+	
+/*GEBIED PROGRAMMA */
+.pop-image-13 {
+	width:23%;
+	height:auto;
+	float:left;
+	padding:1%;
+}
+	
+.pop-image-23 {
+	width:73%;
+	height:auto;
+	float:left;	
+	padding:1%;
+}
+	
+.pop-14 .pop-icon {
+	width:90%;
+	height:auto;
+	margin:auto;
+	padding:5%;
+}
+	
+.pop-14 .pop-icon img {
+	width:100%;
+	height:auto;
+	float:left;
+}
+	
+.camera {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border:3px #3a9999 solid;
+    border-radius: 3px;
+	overflow:hidden;
+}
+	
+.camera-results {
+	width: 100%;
+	min-width:400px;
+	height:auto;
+	float:left;
+}
+	
+.camera-results .gebied-result {
+    width: 150px;
+    height: auto;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background: #d2e8f1;
+    border-radius: 3px;
+}
+
+.camera-results .gebied-result .result-nr {
+	width: 100%;
+	height:auto;
+	float:left;	
+	font-weight:600;
+	padding: 5px 0;
+}
+
+.camera-results .gebied-result .result-name {
+	width: 100%;
+	height:auto;
+	float:left;	
+	padding: 5px 0;
+}
+
+.melding-title {
+    width: 90%;
+    height: auto;
+    padding: 50px 5% 10px;
+    margin: 0 0 30px;
+    float: left;
+    text-align: center;
+    background: #f7fafc;
+    color: #d53030;	
+}
+	
+</style>
+</head>
+	
+<script>
+/*
+Reference: http://jsfiddle.net/BB3JK/47/
+*/
+$( document ).ready(function() {
+
+
+$('select').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+  
+    $this.addClass('select-hidden'); 
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled"></div>');
+
+    var $styledSelect = $this.next('div.select-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+  
+    var $list = $('<ul />', {
+        'class': 'select-options'
+    }).insertAfter($styledSelect);
+  
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+    }
+  
+    var $listItems = $list.children('li');
+  
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+  
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+  
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+
+});
+	});
+</script>
+	
+<body>
+	
+	<!-- PROGRAMMA 1 GEBIED BINNENMELDEN -->
+	<!-- PROGRAMMA 1 STAP 1 -->
+<div class="pop-up">
+	<div class="pop-header">
+		<div class="pop-75">
+			<p>Gebied binnenmelden</p>
+		</div>
+		<div class="pop-25">
+			<div class="pop-sluiten pop-s">
+				<p>Sluiten</p>
+			</div>
+		</div>
+	</div>
+	<div class="pop-title">
+		<h2>Hoe wil je het gebied binnenmelden?</h2>
+	</div>
+	<div class="pop-image grow">
+		<div class="image">
+			<img src="/icon/icons8-hand-up-filled-100%20(1).png" />
+		</div>
+		<div class="keuze">
+			<h4>Handmatig invoeren</h4>
+		</div>
+	</div>
+	<div class="pop-image grow">
+		<div class="image">
+			<img src="/icon/icons8-qr-code-100%20(1).png" />
+		</div>
+		<div class="keuze">
+			<h4>QR-code gebruiken</h4>
+		</div>
+		
+	</div>
+
+	<!-- <div class="pop-text">	
+		<p>blablablablablablablablablabla</p>
+	</div> -->
+	<div class="pop-buttons">
+		<div class="btn">
+			<div class="pop-annuleer pop-s">
+				<h4>Annuleer</h4>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="pop-verder">
+				<h4>Ga verder</h4>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<!-- PROGRAMMA 1 STAP 2 -->
+<div class="pop-up">
+	<div class="pop-header">
+		<div class="pop-75">
+			<p>Gebied binnenmelden</p>
+		</div>
+		<div class="pop-25">
+			<div class="pop-sluiten pop-s">
+				<p>Sluiten</p>
+			</div>
+		</div>
+	</div>
+	<div class="pop-title">
+		<h2>Hoe wil je het gebied binnenmelden?</h2>
+	</div>
+	<div class="pop-image-13">
+		<div class="camera">
+			
+			
+
+<div style="display:none" id="result"></div>
+	<div class="selector" id="webcamimg" onclick="setwebcam()" align="left" ></div>
+		<div class="selector" id="qrimg" onclick="setimg()" align="right" ></div>
+			<center id="mainbody"><div id="outdiv"></div></center>
+				<canvas id="qr-canvas" width="150" height="150"></canvas>
+
+
+			
+	<script type="text/javascript">load();</script>		
+		</div>
+	</div>
+	<div class="pop-image-23">
+		<div class="keuze">
+			<h3>Gescande gebieden</h3>
+		</div>
+		<div class="camera-results">
+			<div class="gebied-result">
+				<div class="result-nr">
+					<input type="hidden" class="rid" name="rnr" value="2">
+					<input type="hidden" class="rnr-vol" name="rnr" value="3">
+					<h4 class="rnr">3</h4>
+				</div>
+				<div class="result-name">
+					<p class="rn">Br. H La Rose</p>
+				</div>
+			</div>
+			
+			<div class="gebied-result">
+				<div class="result-nr">
+					<input type="hidden" class="rid" name="rnr" value="3">
+					<input type="hidden" class="rnr-vol" name="rnr" value="32,33,34">
+					<h4 class="rnr">32, 33, 34</h4>
+				</div>
+				<div class="result-name">
+					<p class="rn">Br. J Muringen</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="pop-text">	
+		<p>blablablablablablablablablabla</p>
+	</div> -->
+	<div class="pop-buttons">
+		<div class="btn">
+			<div class="pop-annuleer pop-s">
+				<h4>Opnieuw</h4>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="pop-verder">
+				<h4>Binnenmelden</h4>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<!-- PROGRAMMA 1 STAP 4 -->
+<div class="pop-up">
+	<div class="pop-header">
+		<div class="pop-75">
+			<p>Gebied binnenmelden</p>
+		</div>
+		<div class="pop-25">
+			<div class="pop-sluiten pop-s">
+				<p>Sluiten</p>
+			</div>
+		</div>
+	</div>
+	<div class="pop-title">
+		<h2>Wat wil je aangeven?</h2>
+	</div>
+	<div class="pop-aangeven-image grow">
+		<div class="image">
+			<img src="/icon/nbpichover.png" />
+		</div>
+		<div class="keuze">
+			<h4>Niet beller</h4>
+		</div>
+	</div>
+	<div class="pop-aangeven-image grow">
+		<div class="image">
+			<img src="/icon/atpichover.png" />
+		</div>
+		<div class="keuze">
+			<h4>Anderstalig</h4>
+		</div>
+	</div>
+	<div class="pop-aangeven-image grow">
+		<div class="image">
+			<img src="/icon/anpichover.png" />
+		</div>
+		<div class="keuze">
+			<h4>Anders</h4>
+		</div>
+	</div>
+
+	<!-- <div class="pop-text">	
+		<p>blablablablablablablablablabla</p>
+	</div> -->
+	
+	<div class="pop-buttons">
+		<div class="btn">
+			<div class="pop-annuleer pop-s">
+				<h4>Annuleer</h4>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="pop-verder">
+				<h4>Ga verder</h4>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<!-- PROGRAMMA 1 STAP 5 -->
+<div class="pop-up">
+	<div class="pop-header">
+		<div class="pop-75">
+			<p>Gebied binnenmelden</p>
+		</div>
+		<div class="pop-25">
+			<div class="pop-sluiten pop-s">
+				<p>Sluiten</p>
+			</div>
+		</div>
+	</div>
+	<div class="pop-title">
+		<h2><!-- '.$straat.' '.$nummer.' is een niet-beller sinds? -->Arkstraat 1 is een niet-beller sinds?</h2>
+	</div>
+	<div class="pop-invoerveld">
+		<div class="pop-14">
+			<div class="pop-icon">
+				<img src="/icon/nbpichover.png"/>
+			</div>
+		</div>
+		
+		<div class="pop-34">
+			<label class="label">
+				<h3>Kies een datum</h3>
+			</label>
+			<input class="vandaag" type="date" name="nietbeller" value=""> <!--- Nietbeller input veld --->			
+		</div>
+	</div>
+
+	<!-- <div class="pop-text">	
+		<p>blablablablablablablablablabla</p>
+	</div> -->
+	
+	<div class="pop-buttons">
+		<div class="btn">
+			<div class="pop-annuleer pop-s">
+				<h4>Annuleer</h4>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="pop-verder">
+				<h4>Opslaan</h4>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<!-- PROGRAMMA 1 STAP 6 -->
+<div class="pop-up">
+	<div class="pop-header">
+		<div class="pop-75">
+			<p>Gebied binnenmelden</p>
+		</div>
+		<div class="pop-25">
+			<div class="pop-sluiten pop-s">
+				<p>Sluiten</p>
+			</div>
+		</div>
+	</div>
+	<div class="pop-title">
+		<h2><!-- '.$straat.' '.$nummer.' is anderstalig sinds? -->Arkstraat 1 is anderstalig sinds?</h2>
+	</div>
+	<div class="pop-invoerveld">
+		<div class="pop-14">
+			<div class="pop-icon">
+				<img src="/icon/atpichover.png"/>
+			</div>
+		</div>
+		<div class="pop-34">
+			<label class="label">
+				<h3>Kies een datum</h3>
+			</label>
+			<input class="vandaag" type="date" name="anderstalig" value=""> <!--- Nietbeller input veld --->	
+			
+			<label class="label">
+				<h3>Selecteer taal</h3>
+			</label>
+			<select id="mounth">
+				<option value="hide">-- Taal --</option>
+				<option value="january" rel="icon-temperature">January</option>
+				<option value="february">February</option>
+				<option value="march">March</option>
+				<option value="april">April</option>
+				<option value="may">May</option>
+				<option value="june">June</option>
+				<option value="july">July</option>
+				<option value="august">August</option>
+				<option value="september">September</option>
+				<option value="october">October</option>
+				<option value="november">November</option>
+				<option value="december">December</option>
+			</select>  <!--- Anderstalig input veld --->		
+		</div>
+	</div>
+
+	<!-- <div class="pop-text">	
+		<p>blablablablablablablablablabla</p>
+	</div> -->
+	
+	<div class="pop-buttons">
+		<div class="btn">
+			<div class="pop-annuleer pop-s">
+				<h4>Annuleer</h4>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="pop-verder">
+				<h4>Opslaan</h4>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<!-- PROGRAMMA 1 STAP 7 -->
+<div class="pop-up">
+	<div class="pop-header">
+		<div class="pop-75">
+			<p>Gebied binnenmelden</p>
+		</div>
+		<div class="pop-25">
+			<div class="pop-sluiten pop-s">
+				<p>Sluiten</p>
+			</div>
+		</div>
+	</div>
+	<div class="pop-title">
+		<h2><!-- 'Zijn er bijzonderheden omtrent .$straat.' '.$nummer.' -->Zijn er bijzonderheden omtrent Arkstraat 1?</h2>
+	</div>
+	<div class="pop-invoerveld">
+		<div class="pop-14">
+			<div class="pop-icon">
+				<img src="/icon/anpichover.png"/>
+			</div>
+		</div>
+		<div class="pop-34">
+			<input class="vandaag" type="hidden" name="anders" value=""> <!--- Nietbeller input veld --->		
+			<label class="label">
+				<h3>Type hier uw opmerking(en)</h3>
+			</label>
+			<textarea class="anders-text" type="text" name="anders-invoer"></textarea> <!--- Anders input veld --->		
+		</div>
+	</div>
+
+	<!-- <div class="pop-text">	
+		<p>blablablablablablablablablabla</p>
+	</div> -->
+	
+	<div class="pop-buttons">
+		<div class="btn">
+			<div class="pop-annuleer pop-s">
+				<h4>Annuleer</h4>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="pop-verder">
+				<h4>Opslaan</h4>
+			</div>
+		</div>
+	</div>
+</div>	
+	
+	<!-- PROGRAMMA 1 STAP 8 -->
+<div class="pop-up">
+	<div class="melding-title">
+		<h2>Weet je zeker dat je dit programma wil afsluiten?</h2>
+	</div>
+	
+	<div class="pop-buttons">
+		<div class="btn">
+			<div class="pop-annuleer pop-s">
+				<h4>Nee, annuleer</h4>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="pop-verder">
+				<h4>Ja, sluit af</h4>
+			</div>
+		</div>
+	</div>
+</div>	
+
+
+
+</body>
+</html>
+
+

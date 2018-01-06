@@ -1,0 +1,120 @@
+html, body {
+   	background-color:#599eb1;
+} 
+
+.loginform {
+    margin: 10% auto 0 auto;
+    position: relative;
+    top: 50%;
+    width: 400px;
+    height: 40%;
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    padding: 50px;
+    -moz-box-shadow: 0 0 10px #0479aa;
+    -webkit-box-shadow: 0 0 10px #0479aa;
+    box-shadow: 0 0 10px #0479aa;
+}
+
+.hoofdtekst {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.block {
+    width:250px;
+    margin:5px auto 0 auto;
+    font-size:20px;
+    color:#0479aa;
+}
+
+::-webkit-input-placeholder {
+   color:#0479aa;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color:#0479aa; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:#0479aa; 
+}
+
+:-ms-input-placeholder {  
+   color:#0479aa;
+}
+
+input {
+    font-family: sans-serif;
+    border-radius: 5px;
+    font-size:15px;
+    padding:5px;
+    width:250px;
+    height:40px;
+    border:0;
+    background-color:#ebebeb;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input:hover {
+    -moz-box-shadow:     0 0 3px #0479aa;
+    -webkit-box-shadow:  0 0 3px #0479aa;
+    box-shadow:          0 0 3px #0479aa;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(255, 255, 242) !important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+
+.reset, .submit {
+    background-color:#EBEBEB;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.r, .s{
+    margin: 5px 0 0 0;
+	-moz-box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+    box-shadow:none !important;
+}
+
+.r:hover {
+    color:#ffffff;
+    background-color:#ce2f2f;
+}
+
+.s:hover {
+    color:#ffffff;
+    background-color:#0479aa;
+}
+
+.gwreset {
+    font-family: sans-serif;
+    color:#606060;
+    font-size:12px;
+    text-align: center;
+}
+
+.gwreset:hover {
+    font-family: sans-serif;
+    color:#0479aa;
+    font-size:12px;
+    text-align: center;
+}
+.foutmelding {
+    font-family: sans-serif;
+    color:#ce2f2f;
+    font-size:12px;
+    text-align: center;
+}
+
+

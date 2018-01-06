@@ -1,0 +1,31 @@
+html, body {
+    background-color:#599eb1;
+	position:relative;
+	width:100%;
+	height:auto;
+}
+
+.welkom {
+    border-radius: 3px;
+    width: 200px;
+    height: 200px;
+    /* top: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* position: relative; */
+    /* margin: 0 auto 0 auto; */
+    moz-box-shadow: 0 0 10px #0479aa;
+    -webkit-box-shadow: 0 0 10px #0479aa;
+    box-shadow: 0 0 10px #0479aa;
+}
+
+.welkom > img {
+	border-radius:3px;
+    width:100%;
+    height:auto;
+}
+
+
+<script src='js/algemeen.js' type='text/javascript'></script> <!--transitions-->

@@ -1,0 +1,593 @@
+			
+			input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+html, body {
+   	width: 100%;
+   	min-height: 100%;
+   	position: absolute;
+	margin: 0;
+   	padding: 0;
+}	
+
+.huidigegegevens {
+	text-align: center;
+	font-family: sans-serif;
+}
+
+a {
+   	text-decoration: none;
+}
+
+.optionbar-m ul {
+    float: left;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    display: block;
+    padding: 0 !important;
+    background-color: #8aaab3;
+    margin: 0 auto; 
+}
+		
+.optionbar-m {
+    position: absolute;
+    z-index: 99999;
+    margin: 50px auto;
+     width: 20%;
+    min-width: 300px;
+	position:fixed;
+	z-index: 999999999;
+	height:auto;
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-color: #578e9e;
+    color: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+		
+.optionbar-m:hover > ul > li:hover {  
+	background-color: rgba(75, 132, 148, 0.53);
+}
+		
+.button, .terugp, .annuleer, .annu, .optionbar > ul > li, .optionbar-s > ul > li {
+    cursor: pointer;
+}
+
+.optionbar > ul > li, .optionbar-s > ul > li, .optionbar-m > ul > li {
+    float: left;
+    width: 100%;
+    list-style: none;
+	cursor:pointer;
+}
+
+.programma {
+		width: 180px;
+		height:auto;
+		float:left;
+		text-align: center;
+		font-family: sans-serif;
+		margin:50px;
+		border-radius:3px;
+	}
+	
+.programma:hover{
+box-shadow: 0px 0px 2px 3px rgba(77, 167, 204, 0.6);
+	}
+	
+.prog-icoon {
+    width: 40%;
+    height: auto;
+    float: left;
+    padding: 10% 30% 0 30%;
+}
+	
+	.prog-icoon img{
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+	
+.p-naam {
+    width: 90%;
+    height: auto;
+    float: left;
+    padding: 0 5%;
+    line-height: 0px;
+	color: #4c698a;
+}
+	
+	.permissieicoon {
+		width: 100%;
+		height:auto;
+		float:left;
+	}
+	
+.pi-icoon {
+    width: 10%;
+    height: auto;
+    float: left;
+    padding: 0 45% 10% 45%;
+}
+	
+	.pi-icoon img{
+		width: 100%;
+		height:auto;
+		float:left;
+		 -webkit-box-sizing: none;
+    -moz-box-sizing: none;
+    box-sizing:none ;
+	}
+
+.taals {
+    background-color: rgba(75, 140, 159, 0.49);
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 10;
+    right: 50px;
+    bottom: 100px;
+	cursor:pointer;
+	-webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+	 -webkit-transform: rotate(-45deg);
+	box-shadow: 0 0 5px #888888;
+}
+	
+.lan {
+    background-color: rgba(75, 140, 159, 0.81);
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 9;
+    right: 50px;
+    bottom: 100px;
+	cursor:pointer;
+	-webkit-transition: all 0.5s ease-in-out;
+  	-moz-transition: all 0.5s ease-in-out;
+  	-o-transition: all 0.5s ease-in-out;
+  	transition: all 0.5s ease-in-out;
+	box-shadow: 0 0 5px #888888;
+}
+	
+	.taals img {
+	width:100%;
+	height:auto;
+	float:left;
+	}
+	
+		.lan img {
+	width:100%;
+	height:auto;
+	float:left;
+	}
+	
+	.taals:hover {    
+    -webkit-animation: shake 0.8s ease-in-out 0.1s infinite alternate;
+	background-color: #4b8c9f;
+}
+	
+	.lan:hover {
+	background-color: #4b8c9f;
+	box-shadow: 0 0 10px #888888;
+	}
+
+@-webkit-keyframes shake {
+ from {
+    -webkit-transform: rotate(45deg);
+ }
+ to {
+   -webkit-transform-origin:center center;
+   -webkit-transform: rotate(-45deg);
+ }
+
+}
+
+
+	
+	.langucontainer {
+	color: #1f5565;
+	font-family:sans-serif;
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9;
+    right: 130px;
+    bottom: 180px;
+}
+	.taalgr {
+	width: 100%;
+    height: auto;
+    background-color: #f7de70;
+    text-align: center;
+    float: left;
+	cursor:pointer;
+	}
+
+.taalsel {
+	background-color: #237084;
+	color:#ffffff;
+}
+	
+	.taalgr:first-child {
+		border-radius:5px 5px 0 0;
+	}
+	
+	.taalgr:last-child {
+		border-radius:0 0 5px 5px;
+	}
+	
+	.taalgr:hover {
+	width: 100%;
+    height: auto;
+    background-color: #d4b630;
+    text-align: center;
+    float: left;
+		color:#ffffff;
+	}
+	
+	.rvink {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    z-index: 8;
+    left: 74;
+    top: 104;
+}
+	
+	.rvink img{
+	width:100%;
+	height:auto;
+	float:left;
+	}
+
+.xmark {
+	position:absolute;
+	z-index: 9999999999;
+	padding:10px;
+	width:20px;
+	height:auto;
+	right:0;
+	top:7px;
+	cursor:pointer;
+}
+		
+.xmark img {
+	width:100%;
+	height:auto;
+}
+
+.menuicon {
+	width:20px;
+	height:auto;
+	float:left;
+	margin:10px 50px 10px 10px;
+	cursor:pointer;
+}
+
+.menuicon img{
+	width:100%;
+	height:auto;
+	float:left;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    float: left;
+    margin: 6px 5px 5px 6px;
+}
+
+.header {
+    width:100%;
+    margin:0 auto;
+    float:left;
+    background-color:#237084;
+    height:auto;
+    padding:6px;
+}
+
+.logo > img {
+    width:100%;
+    height:auto;
+    float:left;
+}
+
+.headertaal {
+    color: #237084;
+    width: 30px;
+    height: 24px;
+    padding: 8px;
+    float: left;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0 0 0 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.gebruiker {
+    color: #ffffff;
+    width: 220px;
+    height: auto;
+    padding: 8px;
+    float: right;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.gebruiker > p, .headertaal > p {
+    display: inline;
+    line-height:25px;
+	text-align:center;
+}
+
+.wrapper {
+    float: left;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    
+}
+
+.wrapperlogin {
+    float: left;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    /* background-color: rgb(253, 253, 253); */
+}
+
+.full-wh, .head-gegevens, .refresh-gegevens, .filtercontainer {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.auto-h {
+	height: auto;
+}
+
+.full-w {
+	width: 100%;
+}
+
+.full-h {
+	height: 100%;
+}
+
+.head-gegevens {
+	border-bottom: 1px solid #b6cad0;
+	padding:10px;
+}
+
+.head-gegevens p, .copyr p{
+	margin:0;
+	padding:0;
+}
+
+.head-gegevens, .refresh-gegevens {  
+}
+
+.standaard-f-sans {
+	font-family: sans-serif;
+    font-size: 16px;
+}
+
+.refresh-gegevens {
+	padding: 5px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.tijd, .datum {
+    float: left;
+    width: 16%;
+    min-width: 200px;
+	color:dimgrey;
+}
+
+.mededeling {
+    float: left;
+    width: 68%;
+    height: auto;
+    color: #ce2f2f;
+    min-width: 250px;
+}
+
+.filtercontainer {
+    color: #808080;
+}
+
+.s1 {
+    font-family: sans-serif;
+    font-size:16px;
+     width:30%;
+ display: -webkit-flex; /* Safari */
+    display: flex;
+    height:auto;
+    padding:5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background-color:#f4f4f4;
+
+}
+
+.s2 {
+    font-family: sans-serif;
+    font-size:16px;
+     width:80%;
+   display: -webkit-flex; /* Safari */
+    display: flex;
+    height:auto;
+    padding:5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    
+	
+}
+
+.s3 {
+    font-family: sans-serif;
+    font-size:16px;
+    width:20%;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    height:auto;
+    padding:5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+#knoppen{
+    margin:auto;
+    width:100%;
+    height:auto;
+ 
+	min-width: 150px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.knop {
+    background-color: #b3ced6;
+    margin: 0 auto 20px auto;
+    width: 30%;
+    min-width: 140px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.knop:hover {
+    background-color:#599eb1;
+    
+}
+
+.knop > p {
+    line-height: 1px;
+    color: #ffffff;
+	text-align:center;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding:10px 1%;
+    text-align: center;
+    float: left;
+    background-color: #237084;
+	width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+		
+.zoekgeb {
+    width:200px;
+    padding: 5px;
+    border:none;
+    background-color: rgba(88, 151, 177, 0.99);
+    color: #ffffff;
+    float: left;
+    line-height: 0px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px auto;
+	cursor:pointer;
+    height: 30px;
+}
+		
+		.zoekgeb:hover {
+			background-color:rgba(49, 131, 165, 0.99);
+		}
+		
+.filterzoek {
+    min-width: 180px;
+    width: 18%;
+    padding: 10px 0 10px 2%;
+    height: auto;
+    float: left;
+    border-right: 5px solid #ffffff;
+}
+
+
+		
+.filterzoek .zveld {
+    width: 200px;
+    height: 30px;
+    /* float: left; */
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+}
+		
+.filters {
+    padding: 10px 0;
+    width: 78%;
+    height: auto;
+    float: left;
+    
+}
+		
+.filters .item {
+    width: auto;
+    height: auto;
+    background-color: #f4f4f4;
+    float: left;
+    padding: 0 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+		
+		.filters .standitem {
+    background-color: #dbdbdb;
+}
+		
+		.filters .item:hover, .selectedfilter {
+			color:#ffffff;
+			background-color:#ffc500 !important;
+		}

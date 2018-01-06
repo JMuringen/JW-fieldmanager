@@ -1,0 +1,637 @@
+#map-canvas {
+    height: 320px;
+    margin: 0px;
+    padding: 0px;
+	border-radius:7px;
+}
+
+.qrcodesgk {
+    z-index: 7;
+    position: absolute;
+    width: 120px;
+    border-radius: 0 0 0 5px;
+    height: auto;
+    top: 10px;
+    left: 203px;
+    border-left: 3px solid #316e92;
+    border-bottom: 3px solid #316e92;
+}
+	
+	.mapturn {
+    webkit-transform: rotate(90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 400px;
+    height: 320px;
+    top: 50px;
+    right: 40px;
+    z-index: 1;
+    position: relative;
+    border: 3px solid #316e92;
+    border-radius: 5px;
+}
+	
+	a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+	 
+    @page {
+        size: A4;
+        margin: 0;
+    }
+	.printcontainer {
+	margin: 10% auto;	
+    width: 23cm;
+    height: 34.8cm;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    padding-left: 1.5cm;
+    padding-right: 1.5cm;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* height: 297mm; */
+    /* outline: 1cm #FFEAEA solid; */
+    background-color: rgba(49, 110, 146, 0.41);
+}
+
+
+	
+	.printcon, .printcong, .printcona, .nprintcon{
+      width: 11.44cm;
+    height: 17.4cm;
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    float: left;
+    background-color: #ffffff;
+}
+
+.printcon{
+	width: 11.44cm;
+    height: 16.4cm;
+    padding: 1cm 0 0 0;
+}
+	.printcongf {
+		margin: 0.5cm;
+		width: 10.74cm;
+		height:15.3cm;
+		border:1px;
+		border-style: solid;
+		border-color:#000000;
+		float:left;
+		-webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg); 
+	}
+
+	.gkinfo {
+	width: 15%;
+    height: 69%;
+    float: left;
+	}	
+	
+.gkinfoturn {
+    z-index: 1;
+    width: 430px;
+    min-height: auto;
+    float: left;
+    position: relative;
+    padding: 0 0 0 10px;
+    right: 190px;
+    top: 190px;
+    -webkit-transform: rotate(-90deg);
+    font-size: 17px;
+    text-align: center;
+    color: #1f587a;
+}
+
+.skleur {
+	color: #1f587a;
+	font-size: 13px;
+}
+	
+	.infobuurt {
+    width: 270px;
+    min-height: auto;
+    float: left;
+}
+	
+.infognr {
+    width: 100px;
+    min-height: auto;
+    float: left;
+    font-weight:600;
+}
+	
+	.infocou {
+    width: 50px;
+    min-height: auto;
+	float: left;
+	font-weight:600;	
+	}
+	
+.mapcon {
+    width: 85%;
+    height: 69%;
+    float: left;
+    z-index: 3;
+    position: relative;
+}
+	
+.straatcon {
+    width: 76%;
+    height: 88%;
+    float: left;
+    padding: 2% 2% 0 6%;
+}
+	
+.straatturn {
+    z-index: 1;
+    width: 170px;
+    min-height: 320px;
+    float: left;
+    position: relative;
+    left: 78px;
+    bottom: 78px;
+    -webkit-transform: rotate(-90deg);
+}
+	
+	.totalturn {
+    z-index: 1;
+    width: 150px;
+    min-height: 30px;
+    float: left;
+    position: relative;
+    right: 60px;
+    top:67px;
+    /* padding: 5px; */
+    -webkit-transform: rotate(-90deg);
+}
+	
+.strtotaal {
+    width: 10%;
+    height: 86%;
+    float: left;
+    padding: 2%;
+}
+	
+	.gegcon {
+		width:100%;
+		height:31%;
+		float:left;
+	}
+	
+.straatv {
+    width: 150px;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    top: 10px;
+    font-size: 12px;
+    line-height: 0;
+}
+
+	.straatb {
+    width: 150px;
+    min-height: 40px;
+    z-index: 1;
+    position: relative;
+    font-size: 12px;
+    line-height: 0;
+}
+	
+	
+
+.nrvt {
+    width: 66%;
+    width: 45px;
+    height: auto;
+    float: left;
+	text-align: right;
+}
+	
+.nrt {
+    float: left;
+    width: 95px;
+    height: auto;
+  
+}
+	
+	.lijstinfo {
+		width:100%;
+		height:auto;
+		float:left;
+		
+	}
+	
+	.lijst {
+    	float: left;
+		width: 100%;
+		font-size: 14px;
+		height: 16px;
+    	margin: 1px 0;
+   
+	}
+	
+	.printkop {
+		float:left;
+		width:100%;
+		font-size:12px;
+		height:40px;
+		margin:2px 0;
+	}
+	
+	.titel {
+		font-weight:600;
+	}
+	
+	.pleft {
+		float:left;
+		margin: 2px 0 2px 20px;
+	}
+	
+	.lijstva {
+	float: left;
+    width: 90%;
+    height: auto;
+  	text-align: right;
+	}
+	
+	.lijstva p {
+		margin-left:10%;
+		font-weight:600;
+	}
+	
+	.lijstva, .gtaal{
+		text-align: center;
+		font-size:15px;
+		
+		
+	}
+	
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: -3;
+  top: 30%;
+  width: 20px;
+  right: 0;
+  border-top: 4px solid;
+  border-color: inherit;
+  -webkit-transform:rotate(-5deg);
+  -moz-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  transform:rotate(-5deg);
+}
+
+	.gtaal{
+	float: left;
+    width: 10%;
+    height: auto;
+	color:#005789;
+	border-radius:0 0 0 5px;
+	}
+	
+	.r3 {
+    	font-size: 9.8px;
+		color: #dd0000;
+    	text-align: center;
+	}
+	
+	.pcen {
+		float:left;
+		margin: 2px 0 2px 10px;
+	}
+	
+	.pright {
+		float:right;
+		margin: 2px 20px 2px 0;
+	}
+	
+	.pstraatnaam{
+		font-weight:600;
+	}
+	.pgebiednaam{
+		color:#0077bc;
+	}
+	
+	.td {
+    	color: #0077bc;
+    	bottom: 0px;
+    	text-align: center;
+		font-size: 14px;
+	}
+	
+	.tabelprint {
+		
+	}
+	
+	.pnrs {
+		color:#0077bc;
+		font-weight:600;
+	}
+	
+	.gnr {
+		color:#000000;
+		font-weight:600;
+	}
+	
+	.tabelprint td {
+		border:1px;
+		border-style:solid;
+		border-color:#000000;
+	}
+	
+	.huisnrtitel {
+		width:75%;
+		
+		height:auto;
+		float:left;
+		text-align:center;
+		font-weight:600;
+	}
+	.datums {
+		width:17%;
+		height:auto;
+		float:left;
+		text-align:center;
+		font-weight:600;
+		
+	}
+	
+	.dagdeel {
+		width:7%;
+		height:auto;
+		float:left;
+		text-align:center;
+		font-weight:600;
+		
+	}
+	
+	.printnummer {
+		width:97%;
+		height:19px;
+		margin:1px 1% 1px 2%;
+		/*background-color:#cae3ce;*/
+		background-color:#f4f4f4;
+		float:left;
+		border-radius:5px;
+		font-size:12px;
+	}
+
+	.printnummer p {
+		margin: 0 0 0 2px;
+		line-height:19px;
+	}
+	
+	.allprint {
+		
+		width: 72%;
+    	padding: 0 1% 0 2%;
+		height:auto;
+		float:left;
+		
+	}
+	
+	.nummerlijst {
+		width:33.3%;
+		height:420px;
+		float:left;
+		background-color: #ffffff;
+		-webkit-print-color-adjust: exact;
+	}
+	
+	.oma {
+		width: 5%;
+    	margin: 0 2% 0 1%;
+    	height: 420px;
+    	background-color:#e8e8e8!important;
+    	float: left;
+	}
+	
+	.oma omablock{
+		width:100%;
+		height:8px;
+		float:left;
+	}
+	
+	.datumlijst {
+		width:17%;
+		height:420px;
+		float:left;
+		background-color:#E8E8E8!important;
+		text-align: center;
+		font-size:12px;
+	}
+	@media print {
+		.printcontainer {
+			margin: 0 !important;
+		}
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+        }
+  
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}
+
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+a[href^="https://www.google.com/maps"]{display:none !important}
+			#map-canvas {
+	-webkit-print-color-adjust: exact;
+}
+		
+.nbkleur {
+		background-color:#ffb9b9!important;
+	 -webkit-print-color-adjust: exact;
+	}
+.atkleur {
+		background-color:#a8c8db!important;
+	-webkit-print-color-adjust: exact;
+	}
+    .nummerlijst {
+		-webkit-print-color-adjust: exact;
+		background-color:#ffffff;
+	}
+			.printnummer {
+		-webkit-print-color-adjust: exact;
+		background-color:#f4f4f4;
+		-webkit-print-color-adjust: exact;
+	}
+.oma {
+		-webkit-print-color-adjust: exact;
+    	background-color:#dedede!important;
+    	-webkit-print-color-adjust: exact;
+	}
+	.datumlijst {
+		-webkit-print-color-adjust: exact;
+		background-color:#dedede!important;
+		-webkit-print-color-adjust: exact;
+	}
+	
+}
+	.nbkleur {
+		background-color:#ffb9b9;
+	}
+	
+	.atkleur {
+		background-color:#a8c8db;
+	}
+
+.aturn {
+    z-index: 1;
+    width: 650px;
+    min-height: 412px;
+    float: left;
+    position: relative;
+    right: 114px;
+    top: 113px;
+    -webkit-transform: rotate(-90deg);
+}
+	
+.astrookt, .astrook, .anstrook {
+	float: left;
+    width: 606px;
+    z-index: 1;
+    float: left;
+    position: relative;
+    left: 14px;
+}
+
+.astrookt {
+    border-bottom: 1px solid #1f587a;
+    min-height: 35px;
+}
+	
+.astrook {
+    height: 15px;
+    border-top: 1px solid #1f587a;
+    min-height: 30px;
+}
+	
+.astrookc {
+    width: 564px;
+    z-index: 1;
+    min-height: 40px;
+    font-size: 13px;
+    text-align: center;
+    float: left;
+    font-weight: 600;
+    color: #dd0000;
+    position: relative;
+    left: 14px;
+    padding: 0 20px;
+}
+	
+.astrookc, .anr, .adateb {
+	border-left: 1px solid #1f587a;
+    border-right: 1px solid #1f587a;
+}
+	
+.anstrook {
+    border-top: 1px solid #1f587a;
+    min-height: 50px;
+}
+	
+.anr {
+    width: 30px;
+    height: 30px;
+    float: left;
+    line-height: 0;
+    text-align: center;
+}
+	
+.adate {
+    width: 167px;
+    height: 30px;
+    float: left;
+    line-height: 0;
+    text-align: center;
+    border-right: 1px solid #1f587a;
+	font-size: 12px;
+}
+	
+.adateb {
+    width: 198px;
+    height: 30px;
+    float: left;
+    line-height: 0;
+    text-align: center;
+    line-height: 0;
+}
+
+.atitle {
+   	color: #1f587a;
+	font-size:14px;
+	font-weight: 600;
+}	
+	
+.addv {
+    width: 33px;
+    height: 30px;
+    float: left;
+    line-height: 0;
+    text-align: center;
+    border-right: 1px solid #1f587a;
+}
+	
+.aop {
+    width: 190px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+}
+	
+.aopmerkingen {
+    width: 416px;
+    height: 50px;
+    float: left;
+    text-align: center;
+}
+	
+.ablok1, .ablok2, .ablok3 {
+    height: 35px;
+    float: left;
+	color: #1f587a;
+    font-size: 14px;
+    font-weight: 600;
+}	
+	
+.ablok1, .ablok2 {
+	width: 250px;
+}
+	
+.ablok3 {
+	width: 104px;
+}
+	
+.grays {
+	background-color: #ebebeb;
+}
